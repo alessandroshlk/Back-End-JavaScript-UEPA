@@ -1,0 +1,8 @@
+//Calculando a area de um triangulo em JS
+
+altura = prompt("Insira o valor da Altura do triangulo")
+base = prompt("Insira o valor da Base do tringulo")
+
+area = (base * altura)/2
+
+console.log("A área do triangulo é", area)
