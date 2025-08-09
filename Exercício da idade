@@ -1,0 +1,13 @@
+//Comando "Escreva um script que calcule uma idade em dias, horas, minutos e segundos"
+
+//Declarando a idade
+idade = prompt("Digite a sua idade")
+
+//Conversoes
+dias = idade * 365
+horas = dias * 24
+minutos = horas * 60
+segundos = minutos * 60
+
+//Exibindo no console
+console.log("Você tem " + idade  + " anos, " + dias + " dias, " + horas + "  horas,"  + minutos + " minutos, " + segundos + " segundos,")
