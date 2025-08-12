@@ -1,0 +1,12 @@
+//Declarando as notas com as entradas
+teste1 = parseFloat(prompt("Nota do primeiro teste"))
+teste2 = parseFloat(prompt("Nota do segundo teste"))
+teste3 = parseFloat(prompt("Nota do terceiro teste"))
+teste4 = parseFloat(prompt("Nota do quarto teste"))
+teste5 = parseFloat(prompt("Nota do quinto teste"))
+
+//Pedindo a media concatenando
+media = (teste1 + teste2 + teste3 + teste4 + teste5) / 5
+
+//Exibindo no console
+console.log("A média é: " + media)
