@@ -1,0 +1,14 @@
+idade = Number(prompt("Insira sua idade"))
+
+if (isNaN(idade)) {
+  console.log("Por favor, digite um número válido!")
+}
+  else if (idade <= 12) {
+  console.log("Classificação: Livre!")
+} else if (idade <= 14) {
+  console.log("Classificação: +12")
+} else if (idade <= 16) {
+  console.log("Classificação: +14")
+} else if (idade >= 18) {
+  console.log("Classificação: +18")
+}
