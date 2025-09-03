@@ -1,0 +1,96 @@
+//while (enquanto)
+
+contador = 1
+
+while (contador <=5) {
+
+  console.log("numero: " + contador)
+  contador++ //incrementa para nao gerar um numero infinito.
+  
+  }
+
+------------------//------------------------//---------------------------
+
+//exemplo 2 c/ break
+
+contador = 1
+
+while (true) {
+
+  console.log("Número: " + contador)
+  contador++ //incrementa para nao gerar um numero infinito.
+  
+  if (contador >5) {
+    break
+  }
+  }
+
+
+//exemplo 3
+
+i = 1;
+
+while (i <= 25) {
+  if (i % 3 === 0) {
+    console.log("pin");
+  } else {
+    console.log(i);
+  }
+  i++; // não esquecer de incrementar, senão vira loop infinito!
+}
+
+
+//estrutura "do while".
+
+contador = 1
+
+do {
+  console.log("numero: " + contador)
+  contador++ //
+} while (contador <=5)
+
+
+for (contador = 1; contador <5; contador++){
+  console.log("numero: " + contador)
+}
+
+
+----------------//------------------------//---------------------------
+
+desafio de imprimir os numeros impares com laço "for".
+for (contador = 1; contador <= 25; contador += 2) {
+  console.log("ímpar: " + contador)
+}
+
+----------------//------------------------//---------------------------
+
+escrevendo um programa que imprima a tabuada de qualquer numero.
+numero = 2
+contador = 1;
+
+while (contador <= 10) {
+  console.log(numero + " x " + contador + " = " + (numero * contador))
+  contador++
+}
+
+------------//--------------------------//--------------------
+elabore um programa que leia um numero 
+
+numero = prompt("digite um numero")
+pares = 0
+impares = 0
+
+do {
+  numero = parseInt(prompt("Digite um número (0 para sair):"))
+
+  if (numero !== 0) {
+    if (numero % 2 === 0) {
+      pares++
+    } else {
+      impares++
+    }
+  }
+} while (numero !== 0)
+
+console.log("Quantidade de números pares: " + pares + "\nQuantidade de números ímpares: " + impares)
+
