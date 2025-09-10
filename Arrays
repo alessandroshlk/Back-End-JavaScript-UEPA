@@ -1,0 +1,94 @@
+//declarando uma array
+
+numerosPrimos = [2, 3, 5, 7, 11]
+arrayDiversos = [1.1, , true, "a"]
+
+console.log(typeof(numerosPrimos))
+
+console.log(numerosPrimos)
+console.log(arrayDiversos)
+
+a = new Array(5, 4, 3, 2, 1, "BFD")
+
+console.log(a)
+
+
+
+
+-------------------------//------------------------------//-----------------------------------
+
+
+
+fibonacci = [1, 2, 3, 5, 8, 13]
+
+console.log(fibonacci)
+console.log(fibonacci[0])
+
+fibonacci[0] = 9
+console.log(fibonacci)
+
+fibonacci[0] = 1
+fibonacci[6] = 21
+
+console.log(fibonacci)
+
+
+-------------------------//------------------------------//-----------------------------------
+
+fibonacci = [1, 2, 3, 5, 8, 13]
+
+tamanho = fibonacci.unshift(0)
+console.log(tamanho)
+console.log(fibonacci)
+
+
+tamanho = fibonacci.push(21)
+console.log(tamanho)
+console.log(fibonacci)
+
+//apagando um indice especifico no array 
+
+delete fibonacci[4]
+console.log(fibonacci)
+
+//conceito de apagar dizendo na marra o tamanho do array
+
+fibonacci.length = 4
+console.log(fibonacci)
+
+
+
+tamanho = fibonacci.push(21)
+console.log(tamanho)
+console.log(fibonacci)
+
+
+
+
+
+fibonacci = [1, 2, 3, 5, 8, 13]
+console.log(fibonacci.length)
+
+fibonacci.splice(1, 2) //remove 2 elementos a partir do indice 1
+console.log(fibonacci.length) //4
+
+
+console.log(fibonacci) //[1, 5, 8, 13]
+
+fibonacci.splice(1, 0, "tres", "quatro")
+console.log(fibonacci)
+
+
+-------------------------//------------------------------//-----------------------------------
+
+
+numeros = []
+soma = 0;
+
+for (i = 0; i < 5; i++) {
+  num = parseInt(prompt("Digite o número " + (i + 1) + ":"))
+  numeros.push(num)
+  soma += num       
+}
+
+media = soma / numeros.length
