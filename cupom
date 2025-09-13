@@ -1,5 +1,5 @@
-Melhorar um simulador de caixa de supermercado Usuário precisa informar a descrição e o valor do produto e a quantidade comprada.
-
+Melhorar um simulador de caixa de supermercado 
+Usuário precisa informar a descrição, valor do produto e a quantidade comprada.
 
 
 produto : prompt("Qual produto está levando?")
@@ -7,7 +7,6 @@ descricao : prompt("Descreva seu produto")
 quantidade : prompt("Qual a quantidade está levando")
 
 console.log("Cupom de venda")
-
 
 
 n = parseInt(prompt("Quantos produtos?"))
