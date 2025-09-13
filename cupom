@@ -1,0 +1,30 @@
+Melhorar um simulador de caixa de supermercado Usuário precisa informar a descrição e o valor do produto e a quantidade comprada.
+
+
+
+produto : prompt("Qual produto está levando?")
+descricao : prompt("Descreva seu produto")
+quantidade : prompt("Qual a quantidade está levando")
+
+console.log("Cupom de venda")
+
+
+
+n = parseInt(prompt("Quantos produtos?"))
+total = 0
+cupom = "\nCUPOM\n----------------\n"
+
+for (i = 0; i < n; i++) {
+  desc = prompt("Produto:")
+  valor = parseFloat(prompt("Valor unitário (use . ou ,)").replace(",", "."))
+  qtd = parseInt(prompt("Quantidade:"))
+  itemTotal = valor * qtd
+  total += itemTotal
+  cupom += `${desc} x${qtd} R$ ${itemTotal.toFixed(2)}\n`
+}
+
+cupom += "-----------------\n
+
+
+TOTAL R$ " + total.toFixed(2)
+console.log(cupom)
