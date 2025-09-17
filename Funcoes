@@ -78,6 +78,18 @@ if (delta < 0) {
   let x1 = (-b + Math.sqrt(delta)) / (2*a)
   let x2 = (-b - Math.sqrt(delta)) / (2*a)
 
+
+let temperaturaCelsius = Number(prompt("Digite a temperatura em Celsius:"))
+
+function celsiusParaFahrenheit(c) {
+  return (c * 9/5) + 32;
+}
+
+let temperaturaFahrenheit = celsiusParaFahrenheit(temperaturaCelsius)
+
+console.log(temperaturaCelsius + "°C = " + temperaturaFahrenheit + "°F")
+
+
   console.log("Delta = " + delta)
   console.log("x1 = " + x1)
   console.log("x2 = " + x2)
