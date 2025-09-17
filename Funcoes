@@ -1,0 +1,84 @@
+//funcões 
+
+function somar(a, b) {
+  return a + b
+}
+
+resultado = somar(5, 7)
+console.log("O resultado é: " + resultado)
+
+------------------------//------------------------------//-----------------------
+
+//funcões 
+
+soma = (a, b) => {
+  return a + b
+}
+
+dobro = x => x * 2
+
+console.log(soma(5,7))
+console.log(dobro(6))
+
+------------------------//------------------------------//-------------------------
+
+var globalVar = "Eu sou global"
+
+function minhaFuncao() {
+  console.log(globalVar)
+}
+
+minhaFuncao();
+console.log(globalVar)
+
+------------------------//------------------------------//-------------------------
+
+function outraFuncao() {
+  var localVar = "Eu sou local"
+  console.log(localVar)
+}
+
+outraFuncao();
+console.log(localVar)
+
+------------------------//------------------------------//-------------------------
+
+
+var x = 1
+let y = 2
+const z = 3
+
+if (true) {
+  var x = 10 //Redeclara x no escolpo da funcao (hosting)
+  let y = 20 // Nova y com escolpo de bloco
+  const z = 30 //Nova z com escolpo de bloco
+
+  console.log(x) //10
+  console.log(y) //20
+  console.log(z) //30
+}
+
+console.log(x) //10 (x dentro do if sobrescreveu a x externa)
+console.log(y) //2 (y dentro do if nao afetou y externa)
+console.log(z)  //3 (z dentro do if nao afetou z esterna)
+
+
+------------------------//------------------------------//-------------------------
+
+
+let a = parseFloat(prompt("Digite o valor de a:"))
+let b = parseFloat(prompt("Digite o valor de b:"))
+let c = parseFloat(prompt("Digite o valor de c:"))
+
+let delta = b*b - 4*a*c
+
+if (delta < 0) {
+  console.log("Não existem raízes reais.")
+} else {
+  let x1 = (-b + Math.sqrt(delta)) / (2*a)
+  let x2 = (-b - Math.sqrt(delta)) / (2*a)
+
+  console.log("Delta = " + delta)
+  console.log("x1 = " + x1)
+  console.log("x2 = " + x2)
+}
