@@ -1,0 +1,38 @@
+type Produto = {
+  nome: string
+  descricao: string
+  valor: number
+  quantidade: number
+}
+
+function caixaSupermercado(): void {
+  const n: number = parseInt(prompt("Quantos produtos vai levar?") || "0")
+
+  let total: number = 0
+  let cupom: string = "\nCUPOM\n----------------\n"
+
+  const produtos: Array<Produto> = []
+
+  for (let i = 0; i < n; i++) {
+    const nome: string = prompt("Nome do produto:") || "Sem nome"
+    const descricao: string = prompt("Descrição do produto:") || "Sem descrição"
+    const valor: number = parseFloat(
+      (prompt("Valor unitário (use . ou ,):") || "0").replace(",", ".")
+    )
+    const quantidade: number = parseInt(prompt("Quantidade:") || "1")
+
+    const itemTotal: number = valor * quantidade
+    total += itemTotal
+
+    produtos.push({ nome, descricao, valor, quantidade })
+
+    cupom += `${nome} (${descricao}) x${quantidade} - R$ ${itemTotal.toFixed(2)}\n`
+  }
+
+  cupom += "-----------------\n"
+  cupom += `TOTAL: R$ ${total.toFixed(2)}\n`
+
+  console.log(cupom)
+}
+
+caixaSupermercado()
