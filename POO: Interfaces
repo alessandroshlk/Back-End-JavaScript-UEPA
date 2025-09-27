@@ -1,0 +1,12 @@
+class Usuario {
+
+    nome: string = ""
+    login: string = ""
+    senha: string = ""
+    }
+
+   const usuarioLogado: Usuario = new Usuario()
+
+    usuarioLogado.nome = "Fábio"
+    usuarioLogado.login = "fmarques"
+    usuarioLogado.senha = "456#"
