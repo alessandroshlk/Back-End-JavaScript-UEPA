@@ -10,3 +10,54 @@ class Usuario {
     usuarioLogado.nome = "Fábio"
     usuarioLogado.login = "fmarques"
     usuarioLogado.senha = "456#"
+
+
+
+
+//Definindo classes
+
+    class Livro {
+        
+        titulo: string
+        autor: string
+        ano: number
+        preco: number
+        estoque: number
+    }
+
+    class Cliente {
+
+        nome: string
+        email: string
+        telefone: number
+        endereco: string
+
+    }
+
+    class Pedido {
+
+        data: number
+        formapagamento: string
+        livrosadquiridos: string
+
+    }
+
+//Um livro pode ser adquiridos por muitos cliente no mesmo mês.
+
+
+
+    constructor(titulo: string, autor: string, ano: number, preco: number, estoque: number) {
+        this.titulo = titulo
+        this.autor = autor
+        this.ano = ano
+        this.preco = preco
+        this.estoque = estoque
+    }
+
+    constructor(nome: string email: string, telefone: number, endereco: string) {
+        this.nome = nome   
+        this.email = email
+        this.telefone = telefone
+        this endereco = endereco
+
+    }
