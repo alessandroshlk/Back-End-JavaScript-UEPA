@@ -1,0 +1,116 @@
+class Comida {
+  nome: string
+  energia: number
+
+  constructor(nome: string, energia: number) {
+    this.nome = nome
+    this.energia = energia
+  }
+}
+
+class Cachorro {
+  nome: string
+  peso: number
+  cor: string
+  private energia: number = 100
+
+  constructor(nome: string, cor: string, peso: number = 10) {
+    this.nome = nome
+    this.cor = cor
+    this.peso = peso
+  }
+
+  emitirSom(): void {
+    console.log("au-au")
+    this.energia -= 20
+    if (this.energia < 0) this.energia = 0
+  }
+
+  ouvirSom(som: string): void {
+    if (som === this.nome) {
+      this.emitirSom()
+    }
+  }
+
+  comer(comida: Comida): void {
+    this.energia += comida.energia
+    if (this.energia > 100) {
+      this.energia = 100
+    }
+  }
+
+  getEnergia(): number {
+    return this.energia
+  }
+}
+
+// Exemplo de uso:
+const cachorro = new Cachorro("Sadan", "Caramelo", 12)
+
+// Primeiro loop: cachorro late 10 vezes
+for (let contador = 1; contador <= 10; contador++) {
+  console.log(contador)
+  cachorro.emitirSom()
+}
+
+console.log("Energia antes de comer:", cachorro.getEnergia())
+
+// Cachorro come um osso e recupera energia
+cachorro.comer(new Comida("Osso", 50))
+
+console.log("Energia depois de comer:", cachorro.getEnergia())
+
+// Segundo loop: cachorro late mais 10 vezes
+for (let contador = 11; contador <= 20; contador++) {
+  console.log(contador)
+  cachorro.emitirSom()
+}
+
+console.log("Energia final:", cachorro.getEnergia())
+
+
+
+
+
+
+=======================//=================================//============================
+
+
+
+
+  // Interface: contrato que define como deve ser um "Carro"
+interface Carro {
+  partes: Array<string>
+  montar(): void
+}
+
+// Modelo A do carro
+class CarroModeloA implements Carro {
+  partes: Array<string> = ["motor1.0", "cambio_manual"]
+
+  montar(): void {
+    console.log(this.partes.join("."))
+  }
+}
+
+// Modelo B do carro
+class CarroModeloB implements Carro {
+  partes: Array<string> = ["motor2.0", "cambio_automatico"]
+
+  montar(): void {
+    console.log(this.partes.join(";"))
+  }
+}
+
+// Instâncias de cada modelo
+const carroA: CarroModeloA = new CarroModeloA()
+const carroB: CarroModeloB = new CarroModeloB()
+
+// Função genérica que recebe qualquer array de "Carro"
+// e chama o método montar de cada um
+function montarCarros(carros: Array<Carro>) {
+  carros.forEach((carro) => carro.montar())
+}
+
+// Testando
+montarCarros([carroA, carroB])
